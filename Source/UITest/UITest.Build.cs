@@ -7,11 +7,18 @@ public class UITest : ModuleRules
 	public UITest(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
+		
+		PublicDependencyModuleNames.AddRange(new[]
+		{
+			"Core", "CoreUObject", "Engine", "InputCore"
+		});
 
 		// Uncomment if you are using Slate UI
-		PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore", "SlateRHIRenderer", "UMG" });
+		PrivateDependencyModuleNames.AddRange(new[]
+		{
+			"Slate", "SlateCore", "SlateRHIRenderer", "UMG", "ModelViewViewModel"
+		});
 
 		// Uncomment if you are using online features
 		// PrivateDependencyModuleNames.Add("OnlineSubsystem");
